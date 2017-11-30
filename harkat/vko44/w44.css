@@ -1,0 +1,144 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nappula {
+  padding: 0px 0px;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  width: 60px;
+  height: 60px;
+  background-color: #4388FF;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: border 2s, border-radius 3s;
+  -webkit-transition: border 2s, border-radius 3s;
+}
+.nappula:hover {
+  border-bottom: 2px solid green;
+  border-left: 3px solid green;
+  border-radius: 100%;
+  background-color: #90B9FF;
+}
+.nappula:active {
+  background-color: #366DCC;
+}
+.nappula3 {
+  padding: 20px 40px;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  background-color: #4388FF;
+  border: none;
+  width: 170px;
+  height: 60px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: width 1s, height 1s;
+  -webkit-transition: width 1s, height 1s;
+}
+.nappula3:hover {
+  width: 200px;
+  height: 100px;
+
+}
+.nappula3:active {
+  background-color: #366DCC;
+}
+.nappula2 {
+  position: absolute;
+  padding: 20px 40px;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  top: 50%;
+  left: 60%;
+  transition: top 2s, background-color 2s;
+  -webkit-transition: top 2s, background-color 2s;
+}
+.nappula2:hover {
+  top: 48%;
+  background-color: yellow;
+}
+.nappula2:active {
+  background-color: #366DCC;
+}
+
+@keyframes sliderbg {
+  0% {background-color: green;}
+  25% {background-color: black;}
+  50% {background-color: pink;}
+  75% {background-color: cyan;}
+  100% {background-color: magenta;}
+}
+@keyframes ball {
+  0% {margin-left: 0%;}
+  25% {margin-left: 25%}
+  50% {margin-left: 45.5%}
+  75% {margin-left: 65%}
+  100% {margin-left: 89%;}
+}
+
+.switch {
+  position: absolute;
+  top:15%;
+  margin: 0 auto;
+}
+.cmn-toggle {
+  visibility: hidden;
+}
+.cmn-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+.cmn-toggle-round + label {
+  width: 500px;
+  height: 60px;
+  background-color: #dddddd;
+  border-radius: 60px;
+
+}
+.cmn-toggle-round + label:before,
+.cmn-toggle-round + label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: "";
+}
+.cmn-toggle-round + label:before {
+  right: 1px;
+  background-color: green;
+  border-radius: 60px;
+}
+.cmn-toggle-round + label:after {
+  width: 58px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.cmn-toggle-round:checked + label:before {
+  background-color: magenta;
+  animation-name: sliderbg;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.cmn-toggle-round:checked + label:after {
+  margin-left: 445px;
+  animation-name: ball;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
